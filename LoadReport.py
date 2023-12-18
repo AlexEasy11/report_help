@@ -22,7 +22,7 @@ def get_excel_tab(excel_name: str, excel_sheet: str):
     return worksheet.iter_rows()
 
 
-listexcel = get_excel_tab('otch', 'стейдж')
+listexcel = get_excel_tab('otch', 'Sheet1')
 browser.get(os.getenv('site'))
 browser.find_element(By.XPATH, "//input [@type='email']").send_keys(os.getenv('login'))
 browser.find_element(By.XPATH, "//input [@id='login-password']").send_keys(os.getenv('pass'))
